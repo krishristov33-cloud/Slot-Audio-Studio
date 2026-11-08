@@ -1,0 +1,23 @@
+{
+  "seed": 572104,
+  "active_presentation_seconds": "A ~10.5, B ~10.3, C ~10.3; total all 14.0 including final decay",
+  "format": "stereo 44.1kHz PCM16 + 192kbps MP3",
+  "new_layers": "Mono saturated 76\u201398Hz transient bodies, 2nd/3rd harmonics; coin lower resonator, FM low-mid modulation body, bell subharmonic; high-passed predelayed damped stereo room; richer final weight",
+  "spatial": "27/49/81ms early reflections, diffuse 41ms+ taps; RT60 envelope approx .65\u20131.05s, final award up to 1.52s; wet HP390Hz/LP3900Hz, low sides HP300Hz",
+  "arrangements": {
+    "A-classic-payout": {
+      "character": "Layered softened coin taps + rounded bells + tactile micro-rattle",
+      "cadence": "15 to 27Hz continuous roll; bell color each fourth event, four punctuated award hits"
+    },
+    "B-electronic-tiers": {
+      "character": "Rounded percussive FM/keyclick and short low-mid body, no carrier drone",
+      "cadence": "Held 12/18/25Hz plateaus, short lift accents and deliberate punctuation between tiers; tight total stop"
+    },
+    "C-harmonic-award": {
+      "character": "Dominant overlapping coin/bell count, warm ascending harmonic voicings beneath, rich single final total",
+      "cadence": "17 to 24Hz count across four restrained harmonic swells; no drum kit or bassline"
+    }
+  },
+  "runtime": "One-shot approval previews only, not seamless loops. To make runtime loops separate stationary tier cycles from one-shot lift/award events, wrap all delay/reverb tails or keep a persistent wet bus, and use gain/phase-safe transitions. Current accelerating events and evolving swells must not be reset at endpoints.",
+  "comparison": "Full-preview RMS matched against decoded matching v3 master before common peak-safe attenuation; longer tails mean active RMS also reported. No stem normalization."
+}

@@ -1,0 +1,130 @@
+{
+  "audibly_auditioned": false,
+  "true_peak_method": "4x polyphase estimate, not certified",
+  "common_peak_gain": 1,
+  "assets": {
+    "A-classic-payout": {
+      "seconds": 14.0,
+      "sample_peak_dbfs": -2.6105596662284065,
+      "estimated_true_peak_dbtp": -2.6050322911973343,
+      "rms_dbfs": -19.576213296767907,
+      "active_0_to_10p6_rms_dbfs": -18.37058151664683,
+      "dc": [
+        -1.3099133481152857e-08,
+        -4.547623698892163e-09
+      ],
+      "clipped_samples": 0,
+      "nonfinite": 0,
+      "stereo_correlation": 0.9246584240573096,
+      "mono_fold_rms_change_db": -0.16872654181183475,
+      "power_65_130": 0.0013102400731225686,
+      "power_150_350": 0.0013526056901420594,
+      "low_band_side_to_mid_db": -49.46147456551704,
+      "first_sample": [
+        0.0,
+        0.0
+      ],
+      "last_sample": [
+        0.0,
+        0.0
+      ],
+      "last_100ms_peak": 0.0,
+      "v3_comparison": {
+        "power_65_130": {
+          "v3": 0.00021958682797400923,
+          "v4": 0.0013102400731225686,
+          "power_change_db": 7.757445928197257
+        },
+        "power_150_350": {
+          "v3": 0.00012724134242416497,
+          "v4": 0.0013526056901420594,
+          "power_change_db": 10.265429677214787
+        }
+      },
+      "v3_rms_dbfs": -19.57621468998958,
+      "stem_recombination_max_error": 6.103701895204816e-05
+    },
+    "B-electronic-tiers": {
+      "seconds": 14.0,
+      "sample_peak_dbfs": -3.062477716303772,
+      "estimated_true_peak_dbtp": -3.0569503412727013,
+      "rms_dbfs": -19.576214705861574,
+      "active_0_to_10p6_rms_dbfs": -18.368036802636567,
+      "dc": [
+        2.2738118489157153e-09,
+        4.943069237277466e-09
+      ],
+      "clipped_samples": 0,
+      "nonfinite": 0,
+      "stereo_correlation": 0.9915113983699108,
+      "mono_fold_rms_change_db": -0.018520903977848772,
+      "power_65_130": 0.0016373357995390768,
+      "power_150_350": 0.002863814717603515,
+      "low_band_side_to_mid_db": -55.464158871669056,
+      "first_sample": [
+        0.0,
+        0.0
+      ],
+      "last_sample": [
+        0.0,
+        0.0
+      ],
+      "last_100ms_peak": 0.0,
+      "v3_comparison": {
+        "power_65_130": {
+          "v3": 0.0003254284880599071,
+          "v4": 0.0016373357995390768,
+          "power_change_db": 7.01682189090949
+        },
+        "power_150_350": {
+          "v3": 0.002457099150373832,
+          "v4": 0.002863814717603515,
+          "power_change_db": 0.6652223491336076
+        }
+      },
+      "v3_rms_dbfs": -19.576213917454773,
+      "stem_recombination_max_error": 6.103701895204816e-05
+    },
+    "C-harmonic-award": {
+      "seconds": 14.0,
+      "sample_peak_dbfs": -4.457410203553726,
+      "estimated_true_peak_dbtp": -4.451882828522655,
+      "rms_dbfs": -19.576214659005032,
+      "active_0_to_10p6_rms_dbfs": -18.368056093127272,
+      "dc": [
+        1.3099133481073876e-08,
+        -3.4601484666293526e-09
+      ],
+      "clipped_samples": 0,
+      "nonfinite": 0,
+      "stereo_correlation": 0.9541819685483733,
+      "mono_fold_rms_change_db": -0.10103421096754939,
+      "power_65_130": 0.0015809123797952138,
+      "power_150_350": 0.0018842051681836533,
+      "low_band_side_to_mid_db": -47.529920494472144,
+      "first_sample": [
+        0.0,
+        0.0
+      ],
+      "last_sample": [
+        0.0,
+        0.0
+      ],
+      "last_100ms_peak": 0.0,
+      "v3_comparison": {
+        "power_65_130": {
+          "v3": 0.00022996088354058287,
+          "v4": 0.0015809123797952138,
+          "power_change_db": 8.372538317447434
+        },
+        "power_150_350": {
+          "v3": 0.0008886341560270432,
+          "v4": 0.0018842051681836533,
+          "power_change_db": 3.264051886802392
+        }
+      },
+      "v3_rms_dbfs": -19.576214379709597,
+      "stem_recombination_max_error": 6.103701895210367e-05
+    }
+  }
+}

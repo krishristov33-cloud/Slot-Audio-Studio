@@ -1,0 +1,73 @@
+{
+  "audibly_auditioned": false,
+  "true_peak_method": "4x polyphase oversampling (estimate, not certified meter)",
+  "common_gain": 1.2380180004973615,
+  "assets": {
+    "base_game_loop": {
+      "frames": 756000,
+      "seconds": 17.142857142857142,
+      "bars": 8,
+      "sample_peak": 0.695913571581164,
+      "sample_peak_dbfs": -3.1488938777922613,
+      "true_peak_estimate_dbtp": -3.1433665027611903,
+      "rms_dbfs": -17.514410318662986,
+      "dc_per_channel": [
+        1.8569463288048564e-09,
+        -1.598588591500513e-08
+      ],
+      "nonfinite": 0,
+      "clipped_samples": 0,
+      "stem_recombination_max_error": 9.155552842804449e-05,
+      "boundary_jump_per_channel": [
+        -0.005890072328867458,
+        -0.012665181432538836
+      ],
+      "adjacent_diff_rms": 0.019775562909441338,
+      "adjacent_diff_99_percentile": 0.09369182409131138,
+      "seam_20ms_diff_rms": 0.006986304240993965,
+      "pre_seam_10ms_rms": 0.04934280122890559,
+      "post_seam_10ms_rms": 0.25266129899373135
+    },
+    "bonus_loop": {
+      "frames": 756000,
+      "seconds": 17.142857142857142,
+      "bars": 8,
+      "sample_peak": 0.7763603625598926,
+      "sample_peak_dbfs": -2.1987329164965392,
+      "true_peak_estimate_dbtp": -2.0001722508171245,
+      "rms_dbfs": -16.95551588519613,
+      "dc_per_channel": [
+        2.9872615090817722e-09,
+        -2.745051112738228e-09
+      ],
+      "nonfinite": 0,
+      "clipped_samples": 0,
+      "stem_recombination_max_error": 9.155552842804449e-05,
+      "boundary_jump_per_channel": [
+        -0.00018311105685597795,
+        0.0016479995117038466
+      ],
+      "adjacent_diff_rms": 0.025068199510077237,
+      "adjacent_diff_99_percentile": 0.11670278023621325,
+      "seam_20ms_diff_rms": 0.006748451228647514,
+      "pre_seam_10ms_rms": 0.045870324970150145,
+      "post_seam_10ms_rms": 0.25654970043850706
+    },
+    "win_sting": {
+      "frames": 176400,
+      "seconds": 4.0,
+      "bars": null,
+      "sample_peak": 0.5476546525467696,
+      "sample_peak_dbfs": -5.229864369448807,
+      "true_peak_estimate_dbtp": -5.223199134913983,
+      "rms_dbfs": -18.345633035624576,
+      "dc_per_channel": [
+        0.00041509757584075525,
+        0.00037051806104075206
+      ],
+      "nonfinite": 0,
+      "clipped_samples": 0,
+      "stem_recombination_max_error": 6.103701895204816e-05
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "title": "Hollow Orchard",
+  "direction": "Initial hypothesis: playful-dark tactile electronic / organic hybrid",
+  "bpm": 112,
+  "sample_rate": 44100,
+  "bars": 8,
+  "meter": "4/4",
+  "key": "D minor, Dorian B-natural color",
+  "seed": 41219,
+  "chords": [
+    "Dm(add9)",
+    "Dm(add9)",
+    "Bbmaj7",
+    "Bbmaj7",
+    "G6/D (Dorian)",
+    "G6/D (Dorian)",
+    "Am7",
+    "Dm6/9"
+  ],
+  "patches": {
+    "wood": "inharmonic decaying resonator partials, filtered felt noise attack, soft saturation",
+    "rubber": "triangle/saw blend, falling pitch envelope, low-pass resonant coloration",
+    "bass": "rounded triangle plus fundamental, low-pass, mono",
+    "air": "band-limited noise with slow amplitude modulation",
+    "drums": "pitch-decay kick, filtered noise / resonator rim, short noisy hats"
+  },
+  "loop_processing": "Circular event tails and circular multi-tap room/delay; no endpoint fades. Each loop is a periodic signal.",
+  "gain": "One global gain shared by all assets and stems; no limiter"
+}
