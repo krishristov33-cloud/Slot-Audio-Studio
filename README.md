@@ -20,19 +20,22 @@ npm test
 npm run lint
 ```
 
-No API keys. No database. The project is saved in the browser under `grim-hamster.slot-audio-studio.v1`.
+No API keys. No database. The project autosaves in the browser under `grim-hamster.slot-audio-studio.v2`.
 
 ## What you can do
 
-- Set a project identity: theme, tempo, root, scale, intensity, and a reproducible seed.
-- Browse the event catalogue. Enable, disable, rename, add, and remove cues. Packs can be switched as a group.
-- Render a cue, audition it, change the layers, and render another variation.
-- Shape the three count-up sequences (classic roll, electronic tiers, harmonic award): duration, rate curve, body, brightness, space, decay, pitch, final award, and skip-to-total.
-- Render seamless base, bonus, high-intensity, big-win, and summary beds with separate stems.
-- Run a short scenario: spin, stop, win, count; below-stake notice; turbo; bonus transition; big win; skip.
-- Export 44.1 kHz stereo PCM WAV, stems where the cue has them, project JSON, and a ZIP of enabled cues with `manifest.json` and `recipes.json`.
+The studio is one screen: the sound list on the left, the clip in the center, and the controls for that sound on the right.
 
-Audio does not start on load. The first play is a tap or keypress. Space plays the selected cue when focus is not in a field. Escape stops everything. Leaving the page or hiding it stops playback.
+- The default slot catalogue is preloaded. A row stays empty until you generate it. Add, remove, rename, and reorder sounds.
+- Choose a theme and generate the selected sound or the whole list. Themes change the instrument palette: classic casino, Vegas neon, Egyptian, Asian court, Celtic, pirate, horror, cyber, candy, Norse, western, underwater, fruit retro, and Grim Hamster.
+- Each sound has scale, key, duration, mood, energy, brightness, weirdness, BPM, and an algorithm: subtractive, FM, additive, wavetable, Karplus-Strong, granular, noise, modal bell, or resample.
+- Count-ups, impacts, and music beds show the controls for that type. Music beds use a chord progression.
+- Up to four layers, stacked or resampled, each with EQ, distortion, compressor, reverb, delay, pitch shift, resonator, clipper, and limiter.
+- Q turns on automation. Click a control to open its lane. Curves are linear, smooth, bezier, or step.
+- Ctrl+E splits the selected part at the playhead. Drag parts to move them. Edge handles set fades. Space plays. Ctrl+Z undoes.
+- Export WAV, a ZIP of generated sounds, or project JSON.
+
+Audio does not start on load. Space plays the selected sound when focus is not in a field. Escape stops everything. Leaving or hiding the page stops playback.
 
 ## How the sound is made
 
