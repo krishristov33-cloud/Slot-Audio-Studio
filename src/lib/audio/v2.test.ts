@@ -3,7 +3,7 @@ import { addPoint, deletePoint, movePoint, valueAt, type AutoPoint } from "./aut
 import { arrangeParts, fullPart, splitParts, type ClipPart } from "./timeline";
 import { applyEffect, defaultEffect, limitTo } from "./fx";
 import { makeStereo, peakOf, rmsOf, SR } from "./dsp";
-import { renderMany, renderSound } from "./generate";
+import { renderMany, renderSound, type Sound } from "./generate";
 import { defaultProject, parseProject } from "./model";
 import { THEMES } from "./themes";
 
@@ -113,6 +113,24 @@ describe("theme engine", () => {
     let delta = 0;
     const length = Math.min(a.stereo.l.length, c.stereo.l.length);
     for (let i = 0; i < length; i += 8) delta += Math.abs(a.stereo.l[i] - c.stereo.l[i]);
+    expect(delta).toBeGreaterThan(0.05);
+  });
+
+  it("a brightness lane changes the rendered layer", () => {
+    const sound = structuredClone(defaultProject().sounds.find((item) => item.id === "symbol.land")) as Sound;
+    sound.params.duration = 0.4;
+    const flat = renderSound(sound, THEMES[0], { maxSeconds: 0.4 });
+    sound.layers[0].automation = [{
+      id: "brightness",
+      param: "brightness",
+      points: [
+        { id: "a", t: 0, v: 0.05, curve: "linear", hx: 0.1, hy: 0 },
+        { id: "b", t: 0.4, v: 1, curve: "linear", hx: 0.1, hy: 0 },
+      ],
+    }];
+    const swept = renderSound(sound, THEMES[0], { maxSeconds: 0.4 });
+    let delta = 0;
+    for (let i = 0; i < flat.stereo.l.length; i += 6) delta += Math.abs(flat.stereo.l[i] - swept.stereo.l[i]);
     expect(delta).toBeGreaterThan(0.05);
   });
 

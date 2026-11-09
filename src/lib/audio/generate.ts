@@ -1,5 +1,5 @@
 import { mixSeed, Rng } from "./rng";
-import { framesFor, makeStereo, panGains, peakOf, scaleStereo, SR, type Stereo } from "./dsp";
+import { framesFor, makeStereo, panGains, peakOf, SR, type Stereo } from "./dsp";
 import { mixInto, renderNote, resampleLinear, type Algorithm } from "./algorithms";
 import { applyChain, limitTo, type Effect } from "./fx";
 import { valueAt, type AutomationLane } from "./automation";
@@ -112,15 +112,27 @@ function toStereo(mono: Float32Array, sr: number, pan = 0): Stereo {
 }
 
 function applyGainLane(stereo: Stereo, lanes: AutomationLane[], fallback: number): void {
-  const lane = lanes.find((item) => item.param === "gain");
-  if (!lane || !lane.points.length) {
-    if (fallback !== 1) scaleStereo(stereo, fallback);
-    return;
-  }
+  const gainLane = lanes.find((item) => item.param === "gain");
+  const energyLane = lanes.find((item) => item.param === "energy");
+  const brightLane = lanes.find((item) => item.param === "brightness");
+  const sr = stereo.sr;
+  let lowL = 0;
+  let lowR = 0;
   for (let i = 0; i < stereo.l.length; i++) {
-    const gain = valueAt(lane.points, i / stereo.sr, fallback);
+    const t = i / sr;
+    let gain = gainLane && gainLane.points.length ? valueAt(gainLane.points, t, fallback) : fallback;
+    if (energyLane && energyLane.points.length) gain *= 0.35 + valueAt(energyLane.points, t, 0.7);
     stereo.l[i] *= gain;
     stereo.r[i] *= gain;
+    if (brightLane && brightLane.points.length) {
+      const cutoff = 280 + valueAt(brightLane.points, t, 0.6) * 7000;
+      const a = Math.exp((-2 * Math.PI * Math.min(cutoff, sr * 0.45)) / sr);
+      lowL = (1 - a) * stereo.l[i] + a * lowL;
+      lowR = (1 - a) * stereo.r[i] + a * lowR;
+      const mix = valueAt(brightLane.points, t, 0.6);
+      stereo.l[i] = stereo.l[i] * mix + lowL * (1 - mix);
+      stereo.r[i] = stereo.r[i] * mix + lowR * (1 - mix);
+    }
   }
 }
 
