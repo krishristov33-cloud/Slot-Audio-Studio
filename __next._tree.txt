@@ -1,3 +1,3 @@
-:HL["/Slot-Audio-Studio/_next/static/chunks/1q0bvc5qa6e9p.css","style"]
+:HL["/Slot-Audio-Studio/_next/static/chunks/0gb26ks1au7ib.css","style"]
 1:[["children",{"s":"__PAGE__","h":160}]]
-0:{"b":"MHmbue3aRpOcKMWL4n-s0","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
+0:{"b":"mcWHthpp30ZsKJi05-LKL","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
