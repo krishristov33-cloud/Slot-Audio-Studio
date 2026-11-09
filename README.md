@@ -13,6 +13,8 @@ npm run dev
 
 Open [http://127.0.0.1:43117](http://127.0.0.1:43117). The dev server listens on port **43117**.
 
+A static GitHub Pages build is produced by `.github/workflows/pages.yml` on pushes to `main`. That build sets `basePath` to `/Slot-Audio-Studio`, so the live site is [https://krishristov33-cloud.github.io/Slot-Audio-Studio/](https://krishristov33-cloud.github.io/Slot-Audio-Studio/). Synthesis still runs in the browser. Nothing plays until you tap Play.
+
 ```bash
 npm test
 npm run lint
